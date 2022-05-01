@@ -6,20 +6,21 @@ console.log(galleryItems);
 
 const createGalleryItem = ({ preview, original, description }) => {
   return `
- <div class="gallery__item">
-  <a class="gallery__link" href="${original}">
-    <img
+  <div>
+    <a class="gallery__item" href="${original}">
+    <img 
     style="display:block"
     class="gallery__image"
     src="${preview}"
-    data-source="${original}"
     alt="${description}"
-    data-lightbox="images"
     />
   </a>
-</div>
-    `;
+  </div>`;
 };
+
+// {/* <a class="gallery__item" href="large-image.jpg">
+//   <img class="gallery__image" src="small-image.jpg" alt="Image description" />
+// </a> */}
 
 const createGalleryContainer = galleryItems.map(createGalleryItem).join('');
 const galleryImages = document.querySelector('.gallery');

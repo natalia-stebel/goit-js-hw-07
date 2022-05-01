@@ -18,6 +18,7 @@ const createGalleryItem = ({ preview, original, description }) => {
     `;
 };
 
+
 const createGalleryContainer = galleryItems.map(createGalleryItem).join('');
 
 const galleryImages = document.querySelector('.gallery');
